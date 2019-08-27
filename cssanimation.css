@@ -1,0 +1,24 @@
+#changey {
+    background-color: green;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    animation-name: move;
+    animation-duration: 1s;
+
+    /* After the page has loaded wait 3 seconds and then start the animation */
+    /*animation-delay: 3s;*/
+    /* Do the animation a certain number of times, can be set to infinite */
+    /*animation-iteration-count: infinite;*/
+    /* Animate  in a particular direction, can alternate to go back and forth*/
+    animation-direction: reverse;
+}
+
+
+/*
+Applying a CSS class to an HTML element with JS
+
+document.querySelector('#changey').addEventListener('click', function () {
+    this.classList.add('move-div')
+})
+*/
