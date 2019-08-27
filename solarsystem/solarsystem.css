@@ -1,0 +1,33 @@
+body {
+    background: #000;
+}
+circle {
+    fill: none;
+}
+.sun {
+    fill: yellow;
+}
+.neptune {
+    fill: #5f9ea0;
+}
+.uranus {
+    fill: #3f56ff;
+}
+.saturn {
+    fill: #f3cfa9;
+}
+.jupiter {
+    fill: #e89054;
+}
+.mars {
+    fill: #aa180a;
+}
+.earth {
+    fill: #58aa65;
+}
+.venus {
+    fill: #e66d18;
+}
+.mergury {
+    fill: #fff;
+}

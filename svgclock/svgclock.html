@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG Clock</title>
+    <style>
+        circle {
+            fill: none;
+        }
+        .center {
+            fill: red;
+        }
+    </style>
+</head>
+<body>
+<svg width="500" height="500">
+    <circle r="250" cx="250" cy="250" stroke="#000"></circle>
+    <text x="240" y="20">12</text>
+    <text x="480" y="240">3</text>
+    <text x="240" y="480">6</text>
+    <text x="20" y="240">9</text>
+    <line x1="250" y1="250" x2="250" y2="80" stroke="#000" stroke-width="3"></line>
+    <line x1="250" y1="250" x2="340" y2="60" stroke="#000" stroke-width="3"></line>
+    <line x1="250" y1="250" x2="320" y2="470" stroke="#ff0000" stroke-width="2"></line>
+    <circle class="center" r="5" cx="250" cy="250"></circle>
+</svg>
+</body>
+</html>
