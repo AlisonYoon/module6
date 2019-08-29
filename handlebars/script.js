@@ -27,5 +27,6 @@ var template = document.getElementById("template").innerHTML
 
 var compiledTemplate = Handlebars.compile(template)
 
-var rendered = compiledTemplate({name: "Sam", age: 33, favouriteColour: "I don't care"})
-document.getElementById("target").innerHTML += rendered
+people.forEach(function(person) {
+    document.getElementById("target").innerHTML += compiledTemplate(person)
+})
