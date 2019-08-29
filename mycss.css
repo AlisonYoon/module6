@@ -4,3 +4,4 @@
 }
 
 /*# sourceMappingURL=mycss.css.map */
+/*map css file to its original sass file so that the browser can "map" it and point it out where the specific property is in sass file. */
