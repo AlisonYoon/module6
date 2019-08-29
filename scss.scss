@@ -1,0 +1,10 @@
+@mixin make-this-huge-and-probably-red($size, $given-color: red) {
+  font-size: $size + 5;
+  color: $given-color;
+}
+
+$primary-colour : #ab47cd;
+
+.fred {
+  background-color: darken($primary-colour, 25%);  /*darken() is a built in function*/
+}
