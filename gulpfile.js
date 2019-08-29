@@ -1,7 +1,6 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')  // gulp-sass is a function
 var sourcemap = require('gulp-sourcemaps')
-var livereload = require('gulp-livereload')
 
 
 sass.compiler = function('node-sass')
@@ -24,12 +23,10 @@ gulp.task('compileAndDoSourceMaps', function (done) {
         .pipe(sass())   // it compiles
         .pipe(sourcemap.write())  //creates the file(but it's not there yet) and put that sourcemap comment it
         .pipe(gulp.dest('.'))    //output that file in the destination
-        .pipe(livereload())
     done()
 })
 
 gulp.task('sass:watch', function(done) {
-    livereload.listen()
     gulp.watch(['scss.scss', '*.html'], gulp.series('compileAndDoSourceMaps'))    //gulp.series() is the list of tasks gulp can run
     //watch ['sass/*/*.scss', '*.html'] -> this watches all the sass files whether they are imported or not
     done()
