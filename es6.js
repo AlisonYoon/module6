@@ -75,3 +75,20 @@ let fatArrow = (numberOne, numberTwo) => {
 }
 
 console.log(fatArrow(3, 7))
+
+
+//Fat arrow as an anonymous callback
+
+let someStudents = ['Liz', 'Tom', 'Matt']
+
+someStudents.forEach((student) => {
+    console.log(student)
+})
+
+someStudents.forEach(student => console.log(student))
+//if it's just one parameter, you can omit parenthesis
+//if it's just one line, you can omit {}
+
+let sausage = 'sausage'
+let addBurger = thing => thing + ' burger'   // Auto-returning one-liner. if it's just one line, you can omit "return"
+console.log(addBurger(sausage))
