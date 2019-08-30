@@ -11,6 +11,7 @@ if(name === "Sam") {
 console.log('After')
 console.log(age) // Uncaught ReferenceError: age is not defined
 
+
 // Basic constant
 // ES5
 
@@ -32,6 +33,7 @@ const otherPi = 3.142
 
 otherPi = 1 // Uncaught TypeError: Assignment to constant variable.
 
+
 // Complex const
 // ES6
 
@@ -51,3 +53,25 @@ console.log(person)
 
 person.age = 34 // Fine
 console.log(person)
+
+
+//Fat Arrow function
+
+var person = {
+    name: "Slim Shady",
+    back: true,
+    introduce: function () {
+        console.log('Hi, my name is')
+        console.log('Hi, my name is')
+        console.log('Hi, my name is')
+        setTimeout(() => {
+            console.log(this.name)
+        }, 1000)
+    }
+}
+
+let fatArrow = (numberOne, numberTwo) => {
+    return numberOne + numberTwo
+}
+
+console.log(fatArrow(3, 7))
