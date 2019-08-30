@@ -243,3 +243,6 @@ console.log('oooooooo')
 //result in console :
 // oooooooo
 // Message: clown
+
+
+//API is like a communication between different codes.
