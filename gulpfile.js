@@ -1,6 +1,7 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')  // gulp-sass is a function
 var sourcemap = require('gulp-sourcemaps')
+var babel = require('gulp-babel')
 
 
 sass.compiler = function('node-sass')
@@ -29,5 +30,12 @@ gulp.task('compileAndDoSourceMaps', function (done) {
 gulp.task('sass:watch', function(done) {
     gulp.watch(['scss.scss', '*.html'], gulp.series('compileAndDoSourceMaps'))    //gulp.series() is the list of tasks gulp can run
     //watch ['sass/*/*.scss', '*.html'] -> this watches all the sass files whether they are imported or not
+    done()
+})
+
+gulp.task('babel', function(done) {
+    gulp.src('es6.js')
+        .pipe(babel())
+        .pipe(gulp.dest('.'))
     done()
 })
