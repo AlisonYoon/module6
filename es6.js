@@ -161,3 +161,27 @@ export default function addSix(number) {  //only one default per file
 import addSix from "./exporter.js"
 
 console.log(addSix(5))
+
+
+//Fetch GET
+// ES5
+var http = new XMLHttpRequest()
+
+var url = 'https://jsonplaceholder.typicode.com/users'
+
+http.open("GET", url, true)
+
+http.onreadystatechange = function() {
+    if(this.readyState === 4 && this.status === 200) {
+        console.log(JSON.parse(this.responseText))
+    }
+}
+
+http.send()
+
+// ES6
+
+let secondUrl = 'https://jsonplaceholder.typicode.com/users'
+fetch(secondUrl)
+    .then(response => response.json())   //response.json() is the alternative of JSON.parse()
+    .then(data => console.log(data))
