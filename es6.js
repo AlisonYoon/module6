@@ -185,3 +185,24 @@ let secondUrl = 'https://jsonplaceholder.typicode.com/users'
 fetch(secondUrl)
     .then(response => response.json())   //response.json() is the alternative of JSON.parse()
     .then(data => console.log(data))
+
+
+//Fetch POST
+// ES6 POST
+let dataToPost = {
+    title: 'How to make awesome sausages',
+    body: 'Just buy them, it\'s way easier',
+    userId: 5
+}
+
+let dataJson = JSON.stringify(dataToPost)
+
+fetch(url, {
+    method: "POST",
+    body: dataJson,
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
+})
+    .then(response => response.json())
+    .then(json => console.log(json))
