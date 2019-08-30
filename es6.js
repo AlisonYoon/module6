@@ -132,13 +132,13 @@ mike.introduce()
 //module
 export var port = 3000
 export function getAccounts(url) {
-...
+    //something
 }
 //or
 module.exports = {
     port: 3000,
     getAccounts: function() {
-    ...
+    //something
     }
 }
 
@@ -206,3 +206,19 @@ fetch(url, {
 })
     .then(response => response.json())
     .then(json => console.log(json))
+
+
+//Promises
+let thing = new Promise(function(resolve, reject) {
+    // do stuff
+    if(stuffWentWell) {
+        resolve('yippeee')
+    } else {
+        // stuff went badly
+        reject('dkfjghdkjfgh')
+    }
+})
+
+thing()
+    .then(message => console.log(message))
+    .catch(message => console.log(message))
