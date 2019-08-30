@@ -222,3 +222,24 @@ let thing = new Promise(function(resolve, reject) {
 thing()
     .then(message => console.log(message))
     .catch(message => console.log(message))
+
+
+//async await
+function scaryClown() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('clown');
+        }, 2000);
+    });
+}
+
+async function msg() {
+    const msg = await scaryClown();
+    console.log('Message:', msg);
+}
+
+msg()
+console.log('oooooooo')
+//result in console :
+// oooooooo
+// Message: clown
