@@ -31,7 +31,7 @@ function dumbFunction() {
 
 const otherPi = 3.142
 
-otherPi = 1 // Uncaught TypeError: Assignment to constant variable.
+let otherPi = 1 // Uncaught TypeError: Assignment to constant variable.
 
 
 // Complex const
@@ -41,7 +41,7 @@ const pets = ['Blob', 'Mario', 'Grondle']
 console.log(pets)
 pets[0] = 'Bolb' // Fine
 
-pets = ['Blob', 'Luigi', 'Sheeply'] // Uncaught TypeError: Assignment to constant variable.
+let pets = ['Blob', 'Luigi', 'Sheeply'] // Uncaught TypeError: Assignment to constant variable.
 
 console.log(pets)
 
