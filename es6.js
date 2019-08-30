@@ -92,3 +92,38 @@ someStudents.forEach(student => console.log(student))
 let sausage = 'sausage'
 let addBurger = thing => thing + ' burger'   // Auto-returning one-liner. if it's just one line, you can omit "return"
 console.log(addBurger(sausage))
+
+
+//default value for parameter
+let doThing = (number = 5) => {
+    let result = number + 5
+    return result
+}
+
+
+//Objects and classes
+
+// ES6 - rad
+
+class Person {
+    constructor(name, age, car) {
+        this.name = name
+        this.age = age
+        this.car = car
+    }
+    introduce = () => {
+        console.log(`Hi, my name is ${this.name}`)
+    }
+}
+
+let sam = new Person("Sam", 33, false)
+
+console.log(sam)
+
+sam.introduce()
+
+let mike = new Person("Mike", 19, true)
+
+console.log(mike)
+
+mike.introduce()
