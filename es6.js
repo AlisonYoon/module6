@@ -148,3 +148,16 @@ console.log(port) // 3000
 //or
 import * as service from 'module'
 console.log(service.port) // 3000
+
+
+//Exporter/Importer 2 - Default imports
+// add type="module" to the script tag that has src="script.js"
+
+//in exporter.js
+export default function addSix(number) {  //only one default per file
+    return number + 6
+}
+//in script.js file
+import addSix from "./exporter.js"
+
+console.log(addSix(5))
