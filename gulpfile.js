@@ -1,7 +1,7 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')  // gulp-sass is a function
 var sourcemap = require('gulp-sourcemaps')
-var babel = require('gulp-babel')
+const babel = require('gulp-babel')
 
 
 sass.compiler = function('node-sass')
@@ -35,7 +35,9 @@ gulp.task('sass:watch', function(done) {
 
 gulp.task('babel', function(done) {
     gulp.src('es6.js')
-        .pipe(babel())
-        .pipe(gulp.dest('.'))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('dist'))
     done()
 })
