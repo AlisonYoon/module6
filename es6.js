@@ -127,3 +127,24 @@ let mike = new Person("Mike", 19, true)
 console.log(mike)
 
 mike.introduce()
+
+
+//module
+export var port = 3000
+export function getAccounts(url) {
+...
+}
+//or
+module.exports = {
+    port: 3000,
+    getAccounts: function() {
+    ...
+    }
+}
+
+import {port, getAccounts} from 'module'
+console.log(port) // 3000
+
+//or
+import * as service from 'module'
+console.log(service.port) // 3000
